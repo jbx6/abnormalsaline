@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <style>
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #F6F6F6;
+    font-family: 'IBM Plex Mono';
+  }
+
+body {
+    font-family: 'IBM Plex Mono';
+    margin: 0 auto;
+    background-color: #f4f4f4;
+
+
+}
+main {
+    background-color: whitesmoke;
+    max-width: 80%;
+    margin: auto;
+}
+
+aside {
+    background-color: ghostwhite;
+}
+
+footer {
+    background-color: ghostwhite;
+}
+
+form {
+    display: flex;
+    font-family: 'IBM Plex Mono';
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: left;
+    padding: 4px 20px 4px 20px;
+    font-size: 1.5rem;
+    color: black;
+    border: 3px solid black;
+    margin: 0;
+}
+  
+  h2 {
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  h3 {
+    font-size: .8rem;
+    text-align: left;
+    font-weight: 600;
+  }
+
+p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-align: left;
+  }
+
+.education {
+    margin-left: 10px;
+}
+
+  select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-family: 'IBM Plex Mono';
+    border-radius: 2px;
+}
+
+table {
+    width: 100%;
+}
+
+thead, th {
+    font-weight: 400;
+}
+
+th, td {
+    padding: 1px;
+    border-radius: 1px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    background-color: #0E1117;
+}
+
+button:hover {
+    background-color: #ccf;
+    color: #0E1117;
+}
+
+label:hover {
+    background-color: #ccf;
+    padding: 2px;
+}
+
+label {
+    margin: auto;
+}
+
+li {
+    font-size: 12px;
+}
+
+
+
+::placeholder {
+    font-family: 'IBM Plex Mono';
+}
+
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+
+.cont {
+    background-color: #fff;
+    padding: 20px;
+    border-radius:3px;
+
+    margin: 0px auto;
+
+}
+
+.contTrade {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.card_top {
+    background-color: #ededed;
+    padding: 1px;
+    border-radius: 3px;
+
+    margin: 0px auto;
+
+}
+
+
+
+
+
+
+.inputNumber {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+.decrypt_input {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    background-color: #c6c6c6;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: text;
+}
+
+.decrypt_button {
+    width: 15%;
+    padding: 16px;
+    background-color: #444444;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.decrypt_output {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ededed;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: alias;
+}
+
+.decrypt_input:hover {
+
+}
+
+.decrypt_button:hover {
+    background-color: #555;
+}
+
+.decrypt_output:hover {
+    
+}
+
+
+
+
+.textarea_hash_input:hover {
+    background-color: #c9c9c9;
+}
+
+
+.textarea_hash {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ededed;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: alias;
+}
+.textarea_hash:hover {
+    background-color: #eaeaea;
+}
+
+.textarea_hash_input {
+    padding: 6px;
+    background-color: #c6c6c6;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: text;
+}
+
+.button_hash {
+    padding: 10px;
+    background-color: #444444;
+    font-family: 'IBM Plex Mono';
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+
+
+#exchange-result {
+    margin-top: 20px;
+}
+
+#exchange-result span {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+.typography {
+    font-family: 'IBM Plex Mono';
+}
+
+.header {
+    background-color: slateblue;
+}
+
+.header-container {
+    box-sizing: border-box;
+    
+    width: 80%;
+    height: 40px;
+    
+
+
+    display: flex;
+
+    line-height: 24px;
+}
+
+.logo {
+    color: tomato;
+    font-family: 'IBM Plex Mono';
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    display: flex;
+    align-self: center;
+    margin: 8px;
+    line-height: 3rem;
+    
+}
+
+.nav-container {
+    box-sizing: border-box;
+    display: block;
+    background-color: lavender;
+}
+
+.sticky {
+    position: sticky;
+    top: 0
+}
+
+.navigation {
+    box-sizing: border-box;
+    display: flex;
+
+    font-size: 16px;
+
+    
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+
+    margin: auto;
+    padding: 9px;
+
+}
+
+.navigation-item {
+    box-sizing: border-box;
+    display: list-item;
+
+    margin-bottom: 0px;
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    color: black;
+    text-align: justify;
+    list-style-type: none;
+}
+
+.navigation-link {
+    cursor: pointer;
+    
+    display: block;
+
+    color: black;
+    font-family: 'IBM Plex Mono';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+
+
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.font {
+    font-family: 'IBM Plex Mono';
+    color: ghostwhite;
+    font-size: 0.8rem;
+    margin-left: 0.8rem;
+}
+
+.font_smaller {
+    font-family: 'IBM Plex Mono';
+    color: ghostwhite;
+    font-size: 0.7rem;
+    margin-left: 0.7rem;
+}
+
+.grid {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.card {
+    margin: 0px;
+}
+
+.card_head {
+    padding: 6px;
+    border-radius: 2px 2px 0px 0px;
+    background-color: #353942;
+    color: ghostwhite;
+}
+
+
+.card_body {
+    padding: 9px;
+    border-radius: 0 0 2px 2px;
+    background-color: #0E1117;
+    color: ghostwhite;
+}
+
+details {
+    border-radius: 0px 0px 2px 2px;
+    background-color: #353942;
+    color: ghostwhite;
+
+}
+details[open] > summary {
+    background-color: #ccf;
+    color: #0E1117;
+}
+
+summary {
+    padding: 8px;
+    border-radius: 2px 2px 0px 0px;
+    background-color: #0E1117;
+    color: ghostwhite;
+    list-style-type: none;
+    cursor: pointer;
+}
+summary:hover {
+    background-color: #ccf;
+    color: #0E1117;
+}
+
+.question {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px;
+    margin: 0;
+}
+
+.correctAnswer {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px;
+    margin: 0;
+}
+
+.choices {
+    color: white;
+    font-size: 12px;
+    padding: 8px;
+    margin: auto; 
+}
+
+.explanation {
+    font-size: 12px;
+    color: white;
+    padding: 0px;
+    margin: 0;
+
+}
+
+.subject {
+    box-sizing: border-box;
+    margin: 10px;
+}
+  </style>
+</head>
+<body>
+  <div id="quizContainer"></div>
+
+  <script>
+    var questions = [
+    {
+        module: 'Major Illnesses',
+        subject: 'Neuroleptic Malignant Disease: for Ambulance Personnel 🚑',
+        title: 'An Introduction to Neuroleptic Malignant Disease for Paramedics.',
+        education: 'Welcome to "An Introduction to Neuroleptic Malignant Disease for Paramedics," a comprehensive educational package designed to equip paramedics with essential knowledge about Neuroleptic Malignant Syndrome (NMS). This engaging program aims to provide a solid foundation in understanding NMS, a potentially life-threatening condition induced by certain medications, enabling paramedics to identify its signs and symptoms promptly and administer appropriate care.<br><br> Through a combination of informative modules, practical case studies, and interactive learning tools, this package will empower paramedics to enhance patient outcomes and make critical decisions with confidence when faced with NMS emergencies.<br><br> Get ready to delve into the intricacies of NMS and embark on a transformative learning journey that will enhance your expertise as a paramedic.',
+        question: 'What is the subject of this package?',
+        choices: ['Neuroleptic Malignant Disease', 'Intubation', 'RTCs', 'Pregnancy'],
+        correctAnswer: 'Neuroleptic Malignant Disease',
+    },
+    {
+        module: 'Major Illnesses',
+        question: 'What is the capital of France?',
+        choices: ['London', 'Berlin', 'Paris', 'Madrid'],
+        correctAnswer: 'Paris',
+        explanation: 'Paris is the capital of France.',
+        education: 'In Part 1 of "An Introduction to Neuroleptic Malignant Disease for Paramedics," we lay the foundation for understanding this critical condition. Through engaging lectures and real-life scenarios, paramedics will gain a comprehensive overview of Neuroleptic Malignant Syndrome (NMS). We will explore the history of NMS, its prevalence, and the medications commonly associated with its onset. By the end of this section, you will have a solid understanding of why NMS is a significant concern for paramedics and how early recognition and intervention can save lives.',
+        subject: 'Neuroleptic Malignant Disease',
+        title: 'Neuroleptic Malignant Disease: Part 1'
+    },
+    {
+        module: 'Major Illnesses',
+        question: 'What is the capital of France?',
+        choices: ['London', 'Berlin', 'Paris', 'Madrid'],
+        correctAnswer: 'Paris',
+        explanation: 'Paris is the capital of France.',
+        education: 'In Part 2, we delve into the intricate pathophysiology of Neuroleptic Malignant Syndrome. By examining the underlying mechanisms and physiological changes that occur during NMS, paramedics will gain valuable insights into its etiology and progression. Through interactive presentations and visual aids, we will explore the neurotransmitter dysregulation, temperature dysregulation, and muscular rigidity characteristic of NMS. With this comprehensive understanding, paramedics will be better equipped to identify key clinical manifestations and differentiate NMS from other similar conditions.',
+        subject: 'Neuroleptic Malignant Disease',
+        title: 'Neuroleptic Malignant Disease: Part 2'
+    },
+    {
+        module: 'Major Illnesses',
+        question: 'What is the capital of France?',
+        choices: ['London', 'Berlin', 'Paris', 'Madrid'],
+        correctAnswer: 'Paris',
+        explanation: 'Paris is the capital of France.',
+        education: 'Part 3 focuses on the crucial aspects of assessing and managing Neuroleptic Malignant Syndrome effectively. We will cover the step-by-step approach to conducting a thorough patient assessment, including the recognition of key signs and symptoms. Paramedics will learn how to differentiate NMS from other medical emergencies and implement appropriate interventions promptly. We will also discuss the pharmacological and non-pharmacological management strategies for NMS, emphasizing the importance of supportive care, temperature control, and discontinuation of offending medications. By the end of this section, paramedics will have the knowledge and confidence to provide optimal care for patients experiencing NMS.',
+        subject: 'Neuroleptic Malignant Disease',
+        title: 'Neuroleptic Malignant Disease: Part 3'
+    },
+    {
+        module: 'Major Illnesses',
+        question: 'What is the capital of France?',
+        choices: ['London', 'Berlin', 'Paris', 'Madrid'],
+        correctAnswer: 'Paris',
+        explanation: 'Paris is the capital of France.',
+        education: 'In Part 4, we wrap up our educational package by providing a comprehensive knowledge recap and summary of Neuroleptic Malignant Syndrome. Paramedics will have the opportunity to review the essential concepts, key assessment findings, and management strategies covered throughout the program. Interactive quizzes and case studies will reinforce the learning outcomes, allowing paramedics to apply their knowledge in practical scenarios. By the end of this section, you will have a solid grasp of NMS, its assessment and management, and be better equipped to handle NMS emergencies with confidence and expertise.',
+        subject: 'Neuroleptic Malignant Disease',
+        title: 'Neuroleptic Malignant Disease: Part 4'
+    }
+    ];
+
+    var currentQuestionIndex = 0;
+    var correctCount = 0;
+    var incorrectCount = 0;
+
+    // Shuffle function to randomize answer choices
+    function shuffle(array) {
+      var currentIndex = array.length;
+      var temporaryValue, randomIndex;
+
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    }
+
+    function displayQuestion() {
+      var question = questions[currentQuestionIndex];
+      var quizContainer = document.getElementById('quizContainer');
+      quizContainer.innerHTML = '';
+
+      var card = document.createElement('div');
+      card.className = 'card';
+
+      var cardHead = document.createElement('header');
+      cardHead.className = 'card_head';
+
+      var subjectContainer = document.createElement('div');
+      subjectContainer.className = 'subject';
+
+      var subjectHeading = document.createElement('h2');
+      subjectHeading.textContent = question.subject;
+
+      var moduleText = document.createElement('p');
+      moduleText.innerHTML = '<strong>Module</strong>: ' + question.module;
+
+      subjectContainer.appendChild(subjectHeading);
+      subjectContainer.appendChild(moduleText);
+      cardHead.appendChild(subjectContainer);
+      card.appendChild(cardHead);
+
+      var cardBody = document.createElement('div');
+      cardBody.className = 'card_body';
+
+      var educationContainer = document.createElement('div');
+      educationContainer.className = 'education';
+
+      var titleHeading = document.createElement('h3');
+      titleHeading.textContent = question.title;
+
+      var educationText = document.createElement('p');
+      educationText.innerHTML = question.education;
+
+      educationContainer.appendChild(titleHeading);
+      educationContainer.appendChild(educationText);
+      cardBody.appendChild(educationContainer);
+
+      var hr = document.createElement('hr');
+      cardBody.appendChild(hr);
+
+      var choicesContainer = document.createElement('div');
+      choicesContainer.className = 'choices';
+
+      var questionHeading = document.createElement('h3');
+      questionHeading.textContent = question.question;
+
+      var choicesText = document.createElement('p');
+      choicesText.textContent = 'Select the correct answer from below to continue:';
+
+      choicesContainer.appendChild(questionHeading);
+      choicesContainer.appendChild(choicesText);
+
+      var shuffledChoices = shuffle(question.choices);
+      shuffledChoices.forEach(function (choice, index) {
+        var choiceInput = document.createElement('input');
+        choiceInput.type = 'radio';
+        choiceInput.id = 'choice' + index;
+        choiceInput.name = 'question';
+        choiceInput.value = choice;
+
+        var choiceLabel = document.createElement('label');
+        choiceLabel.htmlFor = 'choice' + index;
+        choiceLabel.textContent = choice;
+
+        choicesContainer.appendChild(choiceInput);
+        choicesContainer.appendChild(choiceLabel);
+        choicesContainer.appendChild(document.createElement('br'));
+      });
+
+      var nextButton = document.createElement('button');
+      nextButton.textContent = 'Next';
+      nextButton.addEventListener('click', checkAnswer);
+
+      var buttonContainer = document.createElement('div');
+      buttonContainer.style.display = 'flex';
+      buttonContainer.style.flexDirection = 'row-reverse';
+      buttonContainer.appendChild(nextButton);
+
+      choicesContainer.appendChild(buttonContainer);
+      cardBody.appendChild(choicesContainer);
+      card.appendChild(cardBody);
+
+      quizContainer.appendChild(card);
+    }
+
+/* This checkAnswer() function will not display an explanation upon incorrect answer 
+    function checkAnswer() {
+      var userAnswer = document.querySelector('input[name="question"]:checked').value;
+      var question = questions[currentQuestionIndex];
+
+      if (userAnswer === question.correctAnswer) {
+        correctCount++;
+      } else {
+        incorrectCount++;
+        showExplanation(question);
+      }
+
+      currentQuestionIndex++;
+
+      if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+      } else {
+        displayScore();
+      }
+    }
+*/
+    // This, second, checkAnswer() function will display a real-time explanation dialouge upon an incorrect answer
+    function checkAnswer() {
+    var userAnswer = document.querySelector('input[name="question"]:checked').value;
+    var question = questions[currentQuestionIndex];
+
+    if (userAnswer === question.correctAnswer) {
+        correctCount++;
+    } else {
+        incorrectCount++;
+        showExplanation(question);
+        return; // Stop the function execution after displaying the explanation
+    }
+
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+    } else {
+        displayScore();
+    }
+    }
+
+    function showExplanation(question) {
+    var quizContainer = document.getElementById('quizContainer');
+    quizContainer.innerHTML = '';
+
+    var card = document.createElement('div');
+    card.className = 'card';
+
+    var cardHead = document.createElement('header');
+    cardHead.className = 'card_head';
+
+    var headerContainer = document.createElement('div');
+    headerContainer.className = 'header-container';
+
+    var questionSpan = document.createElement('span');
+    questionSpan.className = 'question';
+    questionSpan.textContent = 'Almost...';
+
+    headerContainer.appendChild(questionSpan);
+    cardHead.appendChild(headerContainer);
+    card.appendChild(cardHead);
+
+    var cardBody = document.createElement('div');
+    cardBody.className = 'card_body';
+
+    var correctAnswerDiv = document.createElement('div');
+    correctAnswerDiv.className = 'correctAnswer';
+
+    var explanationSpan = document.createElement('span');
+    explanationSpan.className = 'explanation';
+    explanationSpan.textContent = 'The answer is... ' + question.correctAnswer;
+
+    correctAnswerDiv.appendChild(explanationSpan);
+    cardBody.appendChild(correctAnswerDiv);
+
+    var explanationDiv = document.createElement('div');
+    explanationDiv.className = 'explanation';
+
+    var details = document.createElement('details');
+
+    var summary = document.createElement('summary');
+    summary.textContent = 'Explanation';
+
+    var explanationList = document.createElement('ul');
+    var explanationItem = document.createElement('li');
+    explanationItem.textContent = question.explanation;
+
+    explanationList.appendChild(explanationItem);
+    details.appendChild(summary);
+    details.appendChild(explanationList);
+    explanationDiv.appendChild(details);
+    cardBody.appendChild(explanationDiv);
+
+    var nextButton = document.createElement('button');
+    nextButton.textContent = 'Next';
+    nextButton.addEventListener('click', nextQuestion);
+
+    var buttonContainer = document.createElement('div');
+    buttonContainer.style.display = 'flex';
+    buttonContainer.style.flexDirection = 'row-reverse';
+    buttonContainer.appendChild(nextButton);
+
+    cardBody.appendChild(buttonContainer);
+    card.appendChild(cardBody);
+
+    quizContainer.appendChild(card);
+    }
+
+    function showExplanation(question) {
+      var quizContainer = document.getElementById('quizContainer');
+      quizContainer.innerHTML = '';
+
+      var card = document.createElement('div');
+      card.className = 'card';
+
+      var cardHead = document.createElement('header');
+      cardHead.className = 'card_head';
+
+      var headerContainer = document.createElement('div');
+      headerContainer.className = 'header-container';
+
+      var questionSpan = document.createElement('span');
+      questionSpan.className = 'question';
+      questionSpan.textContent = 'Almost...';
+
+      headerContainer.appendChild(questionSpan);
+      cardHead.appendChild(headerContainer);
+      card.appendChild(cardHead);
+
+      var cardBody = document.createElement('div');
+      cardBody.className = 'card_body';
+
+      var correctAnswerDiv = document.createElement('div');
+      correctAnswerDiv.className = 'correctAnswer';
+
+      var explanationSpan = document.createElement('span');
+      explanationSpan.className = 'explanation';
+      explanationSpan.textContent = 'The answer is... ' + question.correctAnswer;
+
+      correctAnswerDiv.appendChild(explanationSpan);
+      cardBody.appendChild(correctAnswerDiv);
+
+      var explanationDiv = document.createElement('div');
+      explanationDiv.className = 'explanation';
+
+      var details = document.createElement('details');
+
+      var summary = document.createElement('summary');
+      summary.textContent = 'Explanation';
+
+      var explanationList = document.createElement('ul');
+      var explanationItem = document.createElement('li');
+      explanationItem.textContent = question.explanation;
+
+      explanationList.appendChild(explanationItem);
+      details.appendChild(summary);
+      details.appendChild(explanationList);
+      explanationDiv.appendChild(details);
+      cardBody.appendChild(explanationDiv);
+
+      var nextButton = document.createElement('button');
+      nextButton.textContent = 'Next';
+      nextButton.addEventListener('click', nextQuestion);
+
+      var buttonContainer = document.createElement('div');
+      buttonContainer.style.display = 'flex';
+      buttonContainer.style.flexDirection = 'row-reverse';
+      buttonContainer.appendChild(nextButton);
+
+      cardBody.appendChild(buttonContainer);
+      card.appendChild(cardBody);
+
+      quizContainer.appendChild(card);
+    }
+
+    function nextQuestion() {
+      currentQuestionIndex++;
+
+      if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+      } else {
+        displayScore();
+      }
+    }
+
+    function displayScore() {
+      var quizContainer = document.getElementById('quizContainer');
+      quizContainer.innerHTML = '';
+
+      var scoreParagraph = document.createElement('p');
+      scoreParagraph.textContent = 'You\'ve completed the quiz!\nYour score: ' + correctCount + ' correct, ' + incorrectCount + ' incorrect.';
+
+      var restartButton = document.createElement('button');
+      restartButton.textContent = 'Restart Quiz';
+      restartButton.addEventListener('click', restartQuiz);
+
+      quizContainer.appendChild(scoreParagraph);
+      quizContainer.appendChild(restartButton);
+    }
+
+    function restartQuiz() {
+      currentQuestionIndex = 0;
+      correctCount = 0;
+      incorrectCount = 0;
+      displayQuestion();
+    }
+
+    // Start the quiz
+    displayQuestion();
+  </script>
+</body>
+</html>

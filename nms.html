@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+        /* CSS for breadcrumb navigation */
+        .breadcrumbs {
+      list-style-type: none;
+      margin: 0;
+      margin-top: 6px;
+      padding: 0;
+    }
+
+    .breadcrumbs li {
+      display: inline;
+      font-size: 12px;
+    }
+
+    .breadcrumbs li:not(:last-child)::after {
+      content: " > ";
+      font-size: smaller;
+    }
+
+    .breadcrumbs li:last-child {
+      font-weight: normal;
+    }
+    </style>
+    <title>EMNotes</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a class="logo" href="/"><h1>EMNOTES</h1></a>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/learn.html">LEARN</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/about.html">TOPICS</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/external.html">EXTERNAL LINKS</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/contact.html">GET IN TOUCH</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+    <nav>
+        <ul class="breadcrumbs">
+          <li><a href="/">Home</a></li>
+          <li><a href="/learn.html">Learn</a></li>
+          <li>Neuroleptic Malignant Syndrome</li>
+        </ul>
+    </nav>
+    <!-- 
+    <nav>
+        <ul class="breadcrumbs">
+            <li><a href="/">Home</a></li>
+            <li><a href="/learn">Learn</a></li>
+            <li><a href="/learn/majorillnesses">Major Illnesses</a></li>
+            <li>Neuroleptic Malignant Syndrome</li>
+          </ul>
+    </nav> 
+    -->
+    <br>
+    <div id="quizContainer">
+        <!-- Quiz content will be injected here -->
+    </div><br>
+
+
+</main>
+    <script src="learnScript.js"></script>
+
+</body>
+</html>

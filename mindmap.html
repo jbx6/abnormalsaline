@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .node {
+      width: 100px;
+      height: 50px;
+      background-color: #3498db;
+      color: white;
+      text-align: center;x
+      line-height: 50px;
+      position: absolute;
+      cursor: pointer;
+    }
+    .connection {
+      stroke: #e74c3c;
+      stroke-width: 2;
+    }
+  </style>
+</head>
+<body>
+    <div id="mindMapContainer">
+        <!-- Nodes will be dynamically added here -->
+        <svg id="svgContainer">
+          <!-- Connections will be dynamically added here -->
+        </svg>
+      </div>
+    
+
+  <script>
+    const mindMapContainer = document.getElementById('mindMapContainer');
+    const svgContainer = document.getElementById('svgContainer');
+
+    function createNode(label, x, y) {
+      const node = document.createElement('div');
+      node.className = 'node';
+      node.textContent = label;
+      node.style.left = x + 'px';
+      node.style.top = y + 'px';
+      mindMapContainer.appendChild(node);
+    }
+
+    function createConnection(startX, startY, endX, endY) {
+      const connection = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      connection.setAttribute('x1', startX);
+      connection.setAttribute('y1', startY);
+      connection.setAttribute('x2', endX);
+      connection.setAttribute('y2', endY);
+      connection.classList.add('connection');
+      svgContainer.appendChild(connection);
+    }
+
+
+    createNode('Node 0', 0, 0)
+    createNode('right', 450, 150);
+    createNode('left', 150, 200);
+    createNode('middle', 300, 300);
+
+    createConnection(200, 200, 0, 0); // Connect Node 1 and Node 2
+    // Add more nodes, connections, and interactivity as needed
+    // Add more nodes and interactivity as needed
+  </script>
+</body>
+</html>

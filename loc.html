@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+        /* CSS for breadcrumb navigation */
+        .breadcrumbs {
+      list-style-type: none;
+      margin: 0;
+      margin-top: 6px;
+      padding: 0;
+    }
+
+    .breadcrumbs li {
+      display: inline;
+      font-size: 12px;
+    }
+
+    .breadcrumbs li:not(:last-child)::after {
+      content: " > ";
+      font-size: smaller;
+    }
+
+    .breadcrumbs li:last-child {
+      font-weight: normal;
+    }
+    </style>
+    <title>EMNotes</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a class="logo" href="/"><h1>EMNOTES</h1></a>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <nav class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/learn.html">LEARN</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/about.html">TOPICS</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/external.html">EXTERNAL LINKS</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="/contact.html">GET IN TOUCH</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main>
+    <nav>
+        <ul class="breadcrumbs">
+          <li><a href="/">Home</a></li>
+          <li><a href="/learn.html">Learn</a></li>
+          <li>Levels of Consciousness</li>
+        </ul>
+    </nav><br>
+    <div class="container" style="overflow-x: scroll;">
+        <table border="0" cellpadding="10" style="display: flex;">
+            <tr>
+                <td style="background-color: #f4e6de;">Conscious</td>
+                <td style="background-color: #efd9ce;">Confused</td>
+            </tr>
+            <tr>
+
+                <td style="background-color: #dec0f1;">Delirious</td>
+                <td style="background-color: #c4a5d8;">Somnolent</td>
+            </tr>
+            <tr>
+
+                <td style="background-color: #b79ced;">Obtunded</td>
+                <td style="background-color: #957fef;">Stuporous</td>
+            </tr>
+            <tr>
+
+                <td style="background-color: #7161ef;">Comatose</td>
+                <td style="background-color: #523df0;">Dead</td>
+            </tr>
+        </table>
+    </div>
+
+    </div>
+
+
+</main>
+    <script src="learnScript.js"></script>
+
+</body>
+</html>
