@@ -447,6 +447,15 @@ ol {
     border-left: 1px solid #353942 ;
 }
 
+#best-interests-checklist-section ul {
+    list-style-type: none;
+    display: inline;
+    width: 100%;
+}
+#best-interests-checklist-section input[type="checkbox"] {
+    margin-right: 20px;
+}
+
 
 .col_one_third a {
     text-decoration: none;
@@ -541,6 +550,17 @@ a, p.inset-text {
     box-sizing: border-box;
     background-color: rgb(255, 249, 196);
     border: 1px solid rgb(255, 235, 59);
+    color: #353942;
+    display: block;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    padding: 24px;
+}
+
+.postit-note-green {
+    box-sizing: border-box;
+    background-color: rgb(196, 255, 203);
+    border: 1px solid rgb(59, 255, 124);
     color: #353942;
     display: block;
     margin-top: 36px;
