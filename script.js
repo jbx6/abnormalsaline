@@ -414,11 +414,12 @@ function yes() {
   let formHTML = `
   <div class='contact'>
   <p style="font-size: medium; text-decoration: underline;">Please submit your enquiry below:</p>
-  <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+  <form action="mailto:jbx_6@icloud.com" method="post" enctype="text/plain">
   <input type="text" name="contactFName" id="contactFName" placeholder="name">
   <input type="text" name="contactEmail" id="contactEmail" placeholder="email" required>
   <input type="text" name="subject" id="subject" placeholder="subject" required>
   <textarea name="contactMessage" id="contactMessage" placeholder="message" required></textarea>
+  <p style="font-size:medium;">By proceeding, I give consent to my data being processed by this website in order to appropriately manage and delivery my inquiry.</p>
   <div style="display: flex; flex-direction: row; justify-content: flex-start; gap: 20px;;">
       <button type="submit" style="flex-grow: 3;">Submit</button>
       <button type="button" style="flex-grow: 1;" class="hover_backgroud_danger" onclick="no()">Leave</button>

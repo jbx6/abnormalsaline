@@ -4,62 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">    <style>
+    <link rel="stylesheet" href="style.css">
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
       </style>
-    <title>EMNotes</title>
+    <title>Abnormal Saline</title>
 </head>
 <body>
     <header class="header">
         <div class="header-container">
+            <img src="iv-bag.png" alt="" srcset="" width="30" height="30">
             <div class="logo">
-                <a class="logo" href="/"><h1>emNOTES</h1></a>
+                <a class="logo" href="/"><h1>Abnormal Saline</h1></a>
             </div>
         </div>
-
         <div class="nav-container">
             <nav class="navigation">
                 <ul class="navigation-list">
                     <li class="navigation-item">
-                        <a class="navigation-link" href="/learn.html">LEARN</a>
+                        <a class="navigation-link" href="/learn.html">Learn</a>
+                    </li>
+                    <li class="navigation-item dropdown">
+                        <a class="navigation-link dropdown-toggle" href="#">Guides</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="flashcards.html">Mental Capacity Assessment</a></li>
+                        </ul>
                     </li>
                     <li class="navigation-item">
-                        <a class="navigation-link" href="/about.html">TOPICS</a>
+                        <a class="navigation-link" href="/support.html">Support</a>
+                    </li>
+                    <li class="navigation-item dropdown">
+                        <a class="navigation-link dropdown-toggle" href="#">More</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="flashcards.html">Flashcards</a></li>
+                            <li><a href="#">Quizlet</a></li>
+                            <li><a href="blog_dash.html">Blog</a></li>
+                            <li><a href="#">Driving</a></li>
+                        </ul>
                     </li>
                     <li class="navigation-item">
-                        <a class="navigation-link" href="/external.html">EXTERNAL LINKS</a>
-                    </li>
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="/contact.html">GET IN TOUCH</a>
+                        <a class="navigation-link" href="/contact.html">Connect</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-<main>
-    <div id="content">
-        <h1>Contact us</h1>
-        <div id="question">
-            <p style="font-size:medium;">By proceeding, I give consent to my data being stored and processed by this website in order to appropriately manage and delivery my inquiry.</p>
-            <div style="display: flex; flex-direction: row; gap: 20px;">
-            <button onclick="yes()">Get in touch</button>
-            <button onclick="no()">I do not consent</button>
-            </div>
+
+    <main>
+        <div class="wrapper p20">
+            <div id="content">
+                <h1>Contact us</h1>
+                <div id="question">
+                    <p style="font-size:medium;">Use the "Get in touch" button to send us an email (via  a form):</p>
+                    <div style="display: flex; flex-direction: row; gap: 20px;">
+                        <button onclick="yes()">Get in touch</button>
+                        <button onclick="no()">I do not consent</button>
+                    </div>
+                    <p style="font-size:medium;">Or, find us on some of the 'socials':</p>
+                </div>
+                <div id="contact"></div>
+              </div>
         </div>
-
-
-
-        <div id="contact"></div>
-    
+    </main>
+    <footer>
+        <div class="width-container">
+            <p>This website only stores the cookies that are needed to make it work. Read more about <a href="#">how we use cookies</a>.</p>
+            <ul class="advice-list">
+                <li><a href="#">Privacy statement</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">Accessibility statement</a></li>
+            </ul>
+        </div>
+        <br>
+    </footer>
         
-        <!-- More notes can be added here -->
-      </div>
-      
-
-
-</main>
     <script src="script.js"></script>
-
+    
 </body>
+
 </html>
+
+
+
