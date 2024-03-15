@@ -1,0 +1,247 @@
+* {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#mdtScreen {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    height: 100%;
+}
+#map {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    height: 100%;
+}
+
+body {
+    background-color: ghostwhite;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid grey;
+}
+
+.leftNav {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2px;
+    background-color: lightgray;
+    order: 2px solid grey;
+}
+
+.rightNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    padding: 2px;
+    background-color: lightgray;
+    order: 2px solid grey;
+}
+
+p {
+    margin: 5px;
+
+    line-break: normal;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+}
+
+.statuses {
+    display: flex;
+    padding: 2px;
+    order: 2px solid grey;
+}
+
+
+
+.statusItem {
+    padding: 2px;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    white-space: normal;
+    
+    flex: 1;
+    border: 1px solid grey ;
+    background-color: lightgray;
+    box-shadow: 
+        0 0 0 2px rgba(255, 255, 255, 0.1) inset, /* Inner border */
+        0 0 1px rgba(164, 164, 164, 0.2), /* Drop shadow on bottom */
+        1px 0 1px rgba(0, 0, 0, 0.2); /* Drop shadow on right */
+}
+
+.statusItemButton {
+    padding: 10px;
+    border: 1px solid grey ;
+    background-color: lightgray;
+    box-shadow: 
+        0 0 0 2px rgba(255, 255, 255, 0.1) inset, /* Inner border */
+        0 0 1px rgba(164, 164, 164, 0.2), /* Drop shadow on bottom */
+        1px 0 1px rgba(0, 0, 0, 0.2); /* Drop shadow on right */
+}
+
+.topNavButtonsContainer {
+    display: flex;
+    background-color: green;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    border: 2px solid lightgray;
+
+}
+
+.topNavButton {
+    background-color: lightgray;
+    border: 6px solid blue;
+    width: 100%;
+    flex: 1;
+}
+
+.rightNavButtonsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.leftNavButton {
+    background-color: lightgray;
+    padding: 10px;
+    flex: 1;
+    border: 1px solid grey ;
+    box-shadow: 
+        0 0 0 3px rgba(0, 0, 0, 0.1) inset, /* Inner border */
+        0 0 0 6px rgba(255, 255, 255, 0.1) inset, /* Highlight inside */
+        0 0 1px rgba(0, 0, 0, 0.2), /* Drop shadow on bottom */
+        1px 0 1px rgba(0, 0, 0, 0.2); /* Drop shadow on right */
+}
+
+
+
+
+
+
+
+
+.rightNavButton {
+    background-color: lightgray;
+    padding: 10px;
+    flex: 1;
+    border: 1px solid grey ;
+    box-shadow: 
+        0 0 0 3px rgba(0, 0, 0, 0.1) inset, /* Inner border */
+        0 0 0 6px rgba(255, 255, 255, 0.1) inset, /* Highlight inside */
+        0 0 1px rgba(0, 0, 0, 0.2), /* Drop shadow on bottom */
+        1px 0 1px rgba(0, 0, 0, 0.2); /* Drop shadow on right */
+
+}
+
+.rightNavStatuses {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeAndDate {
+    background-color: yellow;
+    border: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    padding: 2px;
+}
+
+.comsStatuses {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.coms {
+    background-color: green;
+    border: 2px solid lightgray;
+    padding: 2px;
+}
+
+.gps {
+    background-color: red;
+    border: 2px solid lightgray;
+    padding: 2px;
+}
+
+.mapOptionsContainer {
+    display: none;
+}
+.mapButtonsContainer {
+    display: flex;
+}
+.mapButtonsContainer button {
+    font-weight: 400;
+}
+
+
+.incidentWrapper {
+    background-color: blue;
+    border: 1px lightgray solid;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px
+}
+
+.incidentNoSubHead {
+    color: whitesmoke;
+    flex: 0;
+    display: flex;
+}
+
+.incidentContentContainer {
+    background-color: whitesmoke;
+}
+
+.incidentInfoParent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        background-color: ghostwhite;
+        width: 100%;
+        }
+.incidentInfoDiv1 { grid-area: 1 / 1 / 2 / 2; }
+.incidentInfoDiv2 { grid-area: 1 / 2 / 2 / 3; }
+
+.incidentButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding: 10px 0px;
+}
+
+
+.incidentButton {
+    background-color: lightgray;
+    padding: 10px;
+    height: 50px;
+    border: 1px solid grey ;
+    box-shadow: 
+        0 0 0 3px rgba(0, 0, 0, 0.1) inset, /* Inner border */
+        0 0 0 6px rgba(255, 255, 255, 0.1) inset, /* Highlight inside */
+        0 0 1px rgba(0, 0, 0, 0.2), /* Drop shadow on bottom */
+        1px 0 1px rgba(0, 0, 0, 0.2); /* Drop shadow on right */
+}

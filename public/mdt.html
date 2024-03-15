@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+   content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+   href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script
+   src="https://unpkg.com/leaflet/dist/leaflet.js">
+  </script>
+  
+  <link rel="stylesheet" href="mdtStyle.css">
+  <title>Document</title>
+ </head>
+ <body>
+  <div class="wrapper">
+   <div class="leftNav">
+    <button class="leftNavButton"
+     id="signOnButton">Sign On</button>
+    <button class="leftNavButton"
+     id="currentIncidentButton">Current
+     Incident</button>
+    <button class="leftNavButton">Incident
+     Database</button>
+    <button class="leftNavButton"
+     id="blankScreenButton">Blank
+     Screen</button>
+    <button class="leftNavButton">Request
+     Voice Call</button>
+    <button
+     class="leftNavButton">Messages</button>
+    <button class="leftNavButton">Control
+     Panel</button>
+    <button
+     class="leftNavButton">Emergency</button>
+    <button
+     class="leftNavButton">Help</button>
+   </div>
+   <div class="display">
+    <div class="statuses">
+     <div class="statusItem">
+      <p class="statusFont">Mob</p>
+     </div>
+     <div class="statusItem">
+      <p class="statusFont">At Scn</p>
+     </div>
+     <div class="statusItem">
+      <p class="statusFont">Lve Scn</p>
+     </div>
+     <div class="statusItem">
+      <p class="statusFont">At Hosp</p>
+     </div>
+     <div class="statusItem">
+      <p class="statusFont">Clear VNR</p>
+     </div>
+     <div class="statusItem">
+      <p class="statusFont">Mob Stby Stn</p>
+     </div>
+     <div class="statusItem">
+      <p class="statusFont">On Stby Stn</p>
+     </div>
+     <div class="statusItem">
+      <p class="statusFont">Run Call</p>
+     </div>
+     <div class="statusItem">
+      <p class="statusFont">Mbk</p>
+     </div>
+     <div class="statusItem">
+      <p class="statusFont">Ack</p>
+     </div>
+     <div class="statusItem">
+      <p class="statusFont"><button
+        class="statusItemButton">More</button>
+      </p>
+     </div>
+    </div>
+    <div class="topNavButtonsContainer">
+     <button class="topNavButton">MOBILE TO
+      STANDBY</button>
+     <button class="topNavButton">ON
+      STANDBY</button>
+     <button class="topNavButton">MOBILE TO
+      STATION</button>
+     <button class="topNavButton">ON
+      STATION</button>
+     <button class="topNavButton">RUNNING
+      CALL</button>
+     <button class="topNavButton">Other
+      Status</button>
+    </div>
+    
+    
+    <div class="map" id="map"></div>
+    <div id="incident-container"> </div>
+    
+    
+    
+   </div>
+   <div class="rightNav">
+    <div class="rightNavStatuses">
+     <div class="timeAndDate">
+      <p>26/11/2020</p>
+      <p>07:40:32</p>
+     </div>
+     <div class="comsStatuses">
+      <div class="coms">
+       <p>COM</p>
+      </div>
+      <div class="gps">
+       <p>GPS</p>
+      </div>
+     </div>
+    </div>
+    <div class="rightNavButtonsContainer">
+     <button class="rightNavButton">Navigator
+      Options</button>
+     <button class="rightNavButton"
+      id="mapOptionsButton">Map
+      Options</button>
+     <div id="mapOptionsContainer"
+      class="mapOptionsContainer">
+      <div class="mapButtonsContainer">
+       <button class="rightNavButton"
+        id="osmButton">OSM</button>
+       <button class="rightNavButton"
+        id="otmButton">OTM</button>
+       <button class="rightNavButton"
+        id="hotButton">HOT</button>
+      </div>
+     </div>
+     <button
+      class="rightNavButton">Goto</button>
+     <button class="rightNavButton">Zoom
+      In</button>
+     <button class="rightNavButton">Zoom
+      Out</button>
+    </div>
+    
+   </div>
+  </div>
+  <br>
+  <p>Working:</p>
+  <ul>
+    <li>Current Incident Tab</li>
+        <ul><li>Close Button</li></ul>
+    <li>Map Options Button</li>
+  </ul>
+  <script src="mdtScript.js"></script>
+ </body>
+</html>
