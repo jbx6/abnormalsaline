@@ -13,9 +13,9 @@
 <body>
     <header class="header">
         <div class="header-container">
-            <img src="infusion.png" alt="" srcset="" width="30" height="30">
+            <img src="iv-bag.png" alt="" srcset="" width="30" height="30">
             <div class="logo">
-                <a class="logo" href="/"><h1>Abnormal Saline</h1></a>
+                <a class="logo" href="/index.html"><h1>Abnormal Saline</h1></a>
             </div>
         </div>
         <div class="nav-container">
@@ -30,7 +30,7 @@
                     <li class="navigation-item dropdown">
                         <a class="navigation-link dropdown-toggle" href="#">Guides</a>
                         <ul class="dropdown-menu">
-                            <li><a href="mca.html">Mental Capacity Assessment</a></li>
+                            <li><a href="/mca.html">Mental Capacity Assessment</a></li>
                         </ul>
                     </li>
                     <li class="navigation-item">
@@ -39,9 +39,9 @@
                     <li class="navigation-item dropdown">
                         <a class="navigation-link dropdown-toggle" href="#">More</a>
                         <ul class="dropdown-menu">
-                            <li><a href="flashcards.html">Flashcards</a></li>
+                            <li><a href="/flashcards.html">Flashcards</a></li>
                             <li><a href="#">Quizlet</a></li>
-                            <li><a href="blog_dash.html">Blog</a></li>
+                            <li><a href="/blog_dash.html">Blog</a></li>
                             <li><a href="#">Driving</a></li>
                         </ul>
                     </li>
@@ -54,31 +54,19 @@
     </header>
 
     <main>
-        <div class="wrapper">
-            <div class="col_one_third p20">
-                <ul>
-                    <li>Maybe Year 1</li>
-                    <li>Maybe Year 2</li>
-                    <li>Maybe Year 3</li>
-                </ul>
-            </div>
-            <div class="col_two_thirds p20">
-                <h1>Knowledge for paramedic</h1>
-                <br>
-                <p>Knowledge is power...</p>
-            </div>
-            <div class="col_one_third p20">
-                <p><strong>In this article</strong></p>
-                <ol>
-                    <li><a href="#five-key-principles-section">Five Key Principles</a></li>
-                    <li><a href="#assessing-capacity-section">Assessing Capacity</a></li>
-                        <div class="no-line-list-div">
-                            <ol><li><a href="#two-stage-test-section" class="f08">Two-stage Test</a></li></ol>
-                            <ol><li><a href="#four-step-approach-section" class="f08">Four-step Approach</a></li></ol>
-                        </div>
-                    <li><a href="#best-interests-checklist-section">Best Interests Checklist</a></li>
-                </ol>
-            </div>
+        <div class="wrapper p20">
+            <div id="content">
+                <h1>Contact us</h1>
+                <div id="question">
+                    <p style="font-size:medium;">Use the "Get in touch" button to send us an email (via  a form):</p>
+                    <div style="display: flex; flex-direction: row; gap: 20px;">
+                        <button onclick="yes()">Get in touch</button>
+                        <button onclick="no()">I do not consent</button>
+                    </div>
+                    <p style="font-size:medium;">Or, find us on some of the 'socials':</p>
+                </div>
+                <div id="contact"></div>
+              </div>
         </div>
     </main>
     <footer>
@@ -93,8 +81,11 @@
         <br>
     </footer>
         
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
     
 </body>
 
 </html>
+
+
+
