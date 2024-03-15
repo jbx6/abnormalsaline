@@ -26,11 +26,8 @@
                         <li class="navigation-item">
                             <a class="navigation-link" href="/learn.html">Learn</a>
                         </li>
-                        <li class="navigation-item dropdown">
-                            <a class="navigation-link dropdown-toggle" href="#">Guides</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/mca.html">Mental Capacity Assessment</a></li>
-                            </ul>
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="/mca.html">Mental Capacity Assessment</a>
                         </li>
                         <li class="navigation-item">
                             <a class="navigation-link" href="/support.html">Fuck This Shit</a>
@@ -77,14 +74,24 @@
     </footer>
         
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const barsIcon = document.querySelector('.bars');
-            const navContainer = document.querySelector('.nav-container');
+document.addEventListener("DOMContentLoaded", function() {
+    const barsIcon = document.querySelector('.bars');
+    const navContainer = document.querySelector('.nav-container');
 
-            barsIcon.addEventListener('click', function() {
-                navContainer.classList.toggle('show');
-            });
-        });
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    barsIcon.addEventListener('click', function() {
+        navContainer.classList.toggle('show');
+        dropdownMenu.classList.remove('show'); // Hide the dropdown menu when toggling the nav container
+    });
+
+    dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default link behavior
+        dropdownMenu.classList.toggle('show'); // Toggle the visibility of the dropdown menu
+    });
+});
+
     </script>
     
 </body>
