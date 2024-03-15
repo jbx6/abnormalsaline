@@ -11,79 +11,79 @@
     <title>Abnormal Saline</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <img src="infusion.png" alt="" srcset="" width="30" height="30">
-            <div class="logo">
-                <a class="logo" href="/index.html"><h1>Abnormal Saline</h1></a>
-            </div>
+    <header>
+        <div class="header-container m20 p20">
+                    <img src="infusion.png" alt="" srcset="" width="30" height="30">
+                    <a class="logo" href="/index.html"><h1>Abnormal Saline</h1></a>
+            <img class="bars" src="menu.png" alt="" srcset="" height="30">
         </div>
-        <div class="nav-container">
-            <nav class="navigation">
-                <ul class="navigation-list">
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="/references.html">References</a>
-                    </li>
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="/learn.html">Learn</a>
-                    </li>
-                    <li class="navigation-item dropdown">
-                        <a class="navigation-link dropdown-toggle" href="#">Guides</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/mca.html">Mental Capacity Assessment</a></li>
-                        </ul>
-                    </li>
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="/support.html">Fuck This Shit</a>
-                    </li>
-                    <li class="navigation-item dropdown">
-                        <a class="navigation-link dropdown-toggle" href="#">More</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/flashcards.html">Flashcards</a></li>
-                            <li><a href="#">Quizlet</a></li>
-                            <li><a href="/blog_dash.html">Blog</a></li>
-                            <li><a href="#">Driving</a></li>
-                        </ul>
-                    </li>
-                    <li class="navigation-item">
-                        <a class="navigation-link" href="/contact.html">Connect</a>
-                    </li>
-                </ul>
+            <nav class="nav-container" id="nav-container">
+                <div class="navigation ">
+                    <ul class="navigation-list">
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="/references.html">References</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="/learn.html">Learn</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="/mca.html">Mental Capacity Assessment</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="/support.html">Fuck This Shit</a>
+                        </li>
+                        <li class="navigation-item dropdown">
+                            <a class="navigation-link dropdown-toggle" href="#">More</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/flashcards.html">Flashcards</a></li>
+                                <li><a href="#">Quizlet</a></li>
+                                <li><a href="/blog_dash.html">Blog</a></li>
+                                <li><a href="#">Driving</a></li>
+
+                            </ul>
+                        <li class="navigation-item"><a class="navigation-link" href="/mdt.html">Mob. Data Term.</a></li>
+                        </li>
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="/contact.html">Connect</a>
+                        </li>
+                    </ul>
+                </div>
+                
             </nav>
-        </div>
     </header>
 
     <main>
-        <div class="wrapper">
-            <div class="col_one_third p20">
-                <p class="flex-end"><strong>Structure</strong></p>
-                <ul>
-                    <li>Maybe Year 1</li>
-                    <li>Maybe Year 2</li>
-                    <li>Maybe Year 3</li>
-                </ul>
+        <div class="p20 m20 grid modules">
+            <h1>Learning area</h1>
+            <p>Click a module below to find out more</p>
+            <div class="module">
+                <h2>Title</h2>
+                <p>Description</p>
+                <p>15/03/2024</p>
+                <button>Take me there...</button>
             </div>
-            <div class="col_two_thirds p20">
-                <h1>Knowledge for paramedic</h1>
-                <br>
-                <p>Knowledge is power...</p>
+            <div class="module">
+                <h2>Title</h2>
+                <p>Description</p>
+                <p>15/03/2024</p>
+                <button>Take me there...</button>
             </div>
-            <div class="col_one_third p20">
-                <p><strong>In this article</strong></p>
-                <ol>
-                    <li><a href="#five-key-principles-section">Five Key Principles</a></li>
-                    <li><a href="#assessing-capacity-section">Assessing Capacity</a></li>
-                        <div class="no-line-list-div">
-                            <ol><li><a href="#two-stage-test-section" class="f08">Two-stage Test</a></li></ol>
-                            <ol><li><a href="#four-step-approach-section" class="f08">Four-step Approach</a></li></ol>
-                        </div>
-                    <li><a href="#best-interests-checklist-section">Best Interests Checklist</a></li>
-                </ol>
+            <div class="module">
+                <h2>Title</h2>
+                <p>Description</p>
+                <p>15/03/2024</p>
+                <button>Take me there...</button>
+            </div>
+            <div class="module">
+                <h2>Title</h2>
+                <p>Description</p>
+                <p>15/03/2024</p>
+                <button>Take me there...</button>
             </div>
         </div>
     </main>
     <footer>
-        <div class="width-container">
+        <div class="p20 m20">
             <p>This website only stores the cookies that are needed to make it work. Read more about <a href="#">how we use cookies</a>.</p>
             <ul class="advice-list">
                 <li><a href="#">Privacy statement</a></li>
@@ -94,7 +94,26 @@
         <br>
     </footer>
         
-    <script src="script.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const barsIcon = document.querySelector('.bars');
+    const navContainer = document.querySelector('.nav-container');
+
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    barsIcon.addEventListener('click', function() {
+        navContainer.classList.toggle('show');
+        dropdownMenu.classList.remove('show'); // Hide the dropdown menu when toggling the nav container
+    });
+
+    dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default link behavior
+        dropdownMenu.classList.toggle('show'); // Toggle the visibility of the dropdown menu
+    });
+});
+
+    </script>
     
 </body>
 
